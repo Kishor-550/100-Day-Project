@@ -10,14 +10,14 @@
     <!-- Primary CSS Files -->
     <link rel="stylesheet" href="../../Assests/CSS/index.css" />
     <link rel="stylesheet" href="../../Assests/CSS/box-generator.css">
+
     <!-- Primary JS Files -->
-    <script defer src="../../Assests/Js/text-transform.js"></script>
+    <script defer src="../../Assests/Js/filter.js"></script>
     <script src="../../Assests/Js/main.js"></script>
         <!-- Primary Meta Tags -->
     <title>CSS Generators — Preview, Edit and Generate CSS.</title>
     <meta name="title" content="CSS Generators — Preview, Edit and Generate CSS.">
     <meta name="description" content="CSS Generator is the ultimate tool for web designers looking to quickly and easily create custom styles for their website. With a user-friendly interface and a wide range of customizable options, our website makes it easy for anyone to create professional-grade styles without any coding knowledge.">
-
 
 
   </head>
@@ -90,11 +90,11 @@
       </li>
       <li>
         <label for="text" class="side-label">Fliter-Generator</label>
-        <input type="radio" name="side-list" id="text" />
+        <input type="radio" name="side-list" id="text" checked/>
         <i class="bi bi-caret-down-fill"></i>
         <div class="aside-content">
-          <a href="../../Pages/filter-generator/filter.html">Filter</a>
-          <a href="../../Pages/filter-generator/drop-shadow.html">Drop-Shadow</a>
+            <a href="../../Pages/filter-generator/filter.html">Filter</a>
+            <a href="../../Pages/filter-generator/drop-shadow.html">Drop-Shadow</a>
         </div>
       </li>
       <li>
@@ -107,7 +107,7 @@
       </li>
       <li>
         <label for="transform" class="side-label">Text-Generator</label>
-        <input type="radio" name="side-list" id="transform" checked/>
+        <input type="radio" name="side-list" id="transform" />
         <i class="bi bi-caret-down-fill"></i>
         <div class="aside-content">
           <a href="../../Pages/text-generator/letter-spacing.html">Letter Spacing</a>
@@ -140,22 +140,70 @@
             <div class="content-wrapper">
                 <div class="left-wrap">
                     <div class="generator-preview">
-                        <div id="element">This is a Sample Paragraph.</div>
+                        <div id="element" style="background: #fff url(../../Assests/Images/Background-image.jpg) center center/cover no-repeat;"></div>
                     </div>
                     <div class="code-preview">
-                        <div id="copyCode">text-transform: uppercase;</div>
+                        <div id="copyCode" >filter: blur(5px);</div>
                         <button id="copyButton" onclick="copyCode()">Copy to Clipboard!</button>
                     </div>
                 </div>
                 <div class="right-wrap">
-                    <div class="select-field field">
-                      <label for="text-transform">Style :</label>
-                      <select name="text-transform" id="text-transform" class="input-style">
-                          <option value="capitalize">capitalize</option>
-                          <option value="uppercase" selected>uppercase</option>
-                          <option value="lowercase">lowercase</option>
-                        </select>
-                  </div>
+                    <div class="range-field field">
+                        <label for="blurValue">Blur:</label>
+                        <div class="">
+                            <input type="range" name="blurValue" id="blurValue" min="0" max="100" value="0" oninput="this.nextElementSibling.value = this.value + ' px'">
+                            <output>0 px</output>
+                        </div>
+                    </div>
+                    <div class="range-field field">
+                        <label for="brightnessValue">Brightness:</label>
+                        <div class="">
+                            <input type="range" name="brightnessValue" id="brightnessValue" min="0" max="300" value="100" oninput="this.nextElementSibling.value = this.value + ' %'">
+                            <output>100 %</output>
+                        </div>
+                    </div>
+                    <div class="range-field field">
+                        <label for="contrastValue">Contrast:</label>
+                        <div class="">
+                            <input type="range" name="contrastValue" id="contrastValue" min="0" max="300" value="100" oninput="this.nextElementSibling.value = this.value + ' %'">
+                            <output>100 %</output>
+                        </div>
+                    </div>
+                    <div class="range-field field">
+                        <label for="grayscaleValue">Grayscale:</label>
+                        <div class="">
+                            <input type="range" name="grayscaleValue" id="grayscaleValue" min="0" max="100" value="0" oninput="this.nextElementSibling.value = this.value + ' %'">
+                            <output>0 %</output>
+                        </div>
+                    </div>
+                    <div class="range-field field">
+                        <label for="hueValue">Hue-Rotate:</label>
+                        <div class="">
+                            <input type="range" name="hueValue" id="hueValue" min="0" max="360" value="0" oninput="this.nextElementSibling.value = this.value + ' deg'">
+                            <output>0 deg</output>
+                        </div>
+                    </div>
+                    <div class="range-field field">
+                        <label for="invertValue">Invert:</label>
+                        <div class="">
+                            <input type="range" name="invertValue" id="invertValue" min="0" max="100" value="0" oninput="this.nextElementSibling.value = this.value + ' %'">
+                            <output>0 %</output>
+                        </div>
+                    </div>
+                    <div class="range-field field">
+                        <label for="saturateValue">Saturate:</label>
+                        <div class="">
+                            <input type="range" name="saturateValue" id="saturateValue" min="0" max="300" value="100" oninput="this.nextElementSibling.value = this.value + ' %'">
+                            <output>100 %</output>
+                        </div>
+                    </div>
+                    <div class="range-field field">
+                        <label for="sepiaValue">Sepia:</label>
+                        <div class="">
+                            <input type="range" name="sepiaValue" id="sepiaValue" min="0" max="300" value="0" oninput="this.nextElementSibling.value = this.value + ' %'">
+                            <output>0 %</output>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
